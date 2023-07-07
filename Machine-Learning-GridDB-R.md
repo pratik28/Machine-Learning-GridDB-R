@@ -191,19 +191,22 @@ As the volume of smoking increases , longivity decreases.
 	
 
 Now, lets try to predict the same using our Test-Data.  
-We supply the test-data to our model, based on its "experience" the model will predict the life expectancy as per the newer input data.   
-    # Predicting the Test set results his lifestyle. 
-    # "ypred" function calculates the predicted probabilities at the values of the explanatory(independent) variable.
-    ypred = predict(lm.r, newdata = testset) 
-    #Now, the data frame testset has the predicted values of life expectancy OR Alive(how long can one expect to stay alive based on post HCC treatment lifestyle. 
+We supply the test-data to our model, based on its "experience" the model will predict the life expectancy as per the newer input data.    
+
+
+     # Predicting the Test set results his lifestyle. 
+     # "ypred" function calculates the predicted probabilities at the values of the explanatory(independent) variable.
+     ypred = predict(lm.r, newdata = testset) 
+     #Now, the data frame testset has the predicted values of life expectancy OR Alive(how long can one expect to stay alive based on post HCC treatment 
+       lifestyle. 
 	
 	# Next, based on the training , let the algorithm now predict the life expectancy in years. 
-    x <- testset$Packs_of_cigarets_per_year 
-    y <- testset$Alive 
-    plot(x, y, main="Predicted - Alive vs Packs_of_cigarets_per_year ", xlab="Packs Cigs", ylab="Alive") 
+     x <- testset$Packs_of_cigarets_per_year 
+     y <- testset$Alive 
+     plot(x, y, main="Predicted - Alive vs Packs_of_cigarets_per_year ", xlab="Packs Cigs", ylab="Alive") 
 
 
-Below is the graph we get for our prediction 
+Above is the graph we get for our prediction 
     ![alttext](images/predicted-1.png "imagetooltip")
 
 We can assume that the predicted values are very good, as the graph we get for the predicted values clearly shows 3 different groups of points. 

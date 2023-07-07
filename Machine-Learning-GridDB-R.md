@@ -174,7 +174,7 @@ Visualization will show our findings clearly.
     y <- trainingsetdf$Alive 
     plot(x, y, main="Alive vs Packs_of_cigarets_per_year (Training set)", xlab="Packs Cigs", ylab="Alive")
 
-    ![alttext](images/training-1.png "imagetooltip")
+![alttext](images/training-1.png "imagetooltip")
 	
 In our training set you can clearly see that life expectancy decreses drastically as Packs_of_cigarets_per_year increases above 100. 
 In fact, you can clearly see 3 groups being formed:-  

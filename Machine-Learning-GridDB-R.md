@@ -176,17 +176,18 @@ Visualization will show our findings clearly.
 
 ![alttext](images/training-1.png "imagetooltip")
 	
-In our training set you can clearly see that life expectancy decreses drastically as Packs_of_cigarets_per_year increases above 100. 
+In our training set you can clearly see that life expectancy decreases drastically as Packs_of_cigarets_per_year increases above 100. 
 In fact, you can clearly see 3 groups being formed:-  
 
 **(i)** Less than 50 packs per year - stay alive more than 10 years 
+
 **(ii)** Between 75-150 packs per year - stay alive close to 7 years 
+
 **(iii)** More than 200 packs a year - do not stay alive for more than 3 years  or so 
 
 **Notable findings and predictions :-** 
 1. There is an indirect/inverse correlation between the number of packets of cigarettes smoked per year , and number of years alive (post operation) . 
-As the volume of smoking increases , longevity decreases.  
-2. There 
+2. As the volume of smoking increases , longevity decreases. 
 3. Since there are many other factors affecting the health of the patients in question, the curves are not smooth/steep, but the relation is evident. 
 	
 

@@ -6,7 +6,7 @@
 
 GridDB is an in-memory database, that allows a vast quantity of data to be stored and searched quickly and safely. 
 
-GridDB is ideally suited for storing machine learning datasets becuase of its high performance, scalability and availability. GridDB can ingest petabytes of data quickly, handle diverse data formats easily and implements Key Container data model efficiently. 
+GridDB is ideally suited for storing machine learning datasets because of its high performance, scalability and availability. GridDB can ingest petabytes of data quickly, handle diverse data formats easily and implements Key Container data model efficiently. 
 Moreover, its in-memory processing coupled with parallel processing within a node and across nodes, ensures very fast query processing and  maximum performance. 
 
 
@@ -16,14 +16,14 @@ Moreover, its in-memory processing coupled with parallel processing within a nod
 
 **Introduction to Machine Learning(ML)**  
 
-Machine Learning is a subset of artificial intelligencw which is concerned with developing algorithms that get smarter with time; they learn from their past data and past experiences,to perform better and to take more informed decisions.  
+Machine Learning is a subset of artificial intelligence which is concerned with developing algorithms that get smarter with time; they learn from their past data and past experiences,to perform better and to make more informed decisions.  
 Data requirements in a ML project are demanding and specific. 
-Machine learning projects require huge volumes of data, first to train the ML/AI models, and then to faciliatate continuous learning as more and more data keeps flowing in.
+Machine learning projects require huge volumes of data, first to train the ML/AI models, and then to facilitate continuous learning as more and more data keeps flowing in.
 
 
 **Why is GridDB ideally suited for AI/ML** 
 
-GridDB is ideally suited for storing machine learning datasets becuase of its high performance, scalability and availability.  
+GridDB is ideally suited for storing machine learning datasets because of its high performance, scalability and availability.  
 GridDB can ingest petabytes of data quickly, handle diverse data formats easily and implements Key Container data model efficiently. 
 Moreover, its in-memory processing coupled with parallel processing within a node and across nodes, ensures very fast query processing and  maximum performance. 
 
@@ -116,7 +116,7 @@ So, we send a POST request to the cluster with details of the container structur
 
 To check if the container was indeed created, you can use the "showcontainer" command, it will list all the containers in your database. 
 Now lets define a function to insert data into the GridDB database. 
-We use fromJSON() function of R, which reads a Json file, which can then be easily be fed to a POST Web API request. 
+We use fromJSON() function of R, which reads a Json file, which can easily be fed to a POST Web API request. 
 
     # Populate the container with rows from JSON or CSV 
     hcc_data_JSON <- fromJSON(hcc_data.json)  
@@ -135,7 +135,7 @@ Later we will use this "training" , and ask the model to predict the life expect
     #Fetch(Query) Only 2 columns are of interest, Alive( i.e. years alive after HCC) and Packs_of_cigarets_per_year (Packs of cigarretes per year) . 
      my_sql_query1 = '(f"""SELECT Packs_of_cigarets_per_year, Alive FROM HCC_Data """) '
 
-    #To retieve data from a GridDB container, the GridDB Web API Query URL must be suffied with "/sql" 
+    #To retrieve data from a GridDB container, the GridDB Web API Query URL must be suffixed with "/sql" 
      my_query_url = "https://cloud1.griddb.com/trial1602/griddb/v2/gs_clustertrial1602/dbs/r_blog/sql"
 
     #Construct the request body 
@@ -149,7 +149,7 @@ Later we will use this "training" , and ask the model to predict the life expect
        body = query_request_body 
        ) 
                              
-    #The data returned is now in dataset variable.  
+    #The data returned is now in the dataset variable.  
 	
 	# Simple Linear Regression 
     # Splitting the dataset into the, Training_set and Test_set 
@@ -169,7 +169,7 @@ Visualization will show our findings clearly.
     #Lets visualize the results. 
     trainingsetdf = data.frame( trainingset) 
 
-    # Visualising the Training set results  
+    # Visualizing the Training set results  
     x <- trainingsetdf$Packs_of_cigarets_per_year 
     y <- trainingsetdf$Alive 
     plot(x, y, main="Alive vs Packs_of_cigarets_per_year (Training set)", xlab="Packs Cigs", ylab="Alive")
@@ -184,20 +184,20 @@ In fact, you can clearly see 3 groups being formed:-
 **(iii)** More than 200 packs a year - do not stay alive for more than 3 years  or so 
 
 **Notable findings and predictions :-** 
-1. There is a indirect/inverse correlation between number of packets of cigarettes smoked per year , and number of years alive (post operation) . 
-As the volume of smoking increases , longivity decreases.  
+1. There is an indirect/inverse correlation between the number of packets of cigarettes smoked per year , and number of years alive (post operation) . 
+As the volume of smoking increases , longevity decreases.  
 2. There 
 3. Since there are many other factors affecting the health of the patients in question, the curves are not smooth/steep, but the relation is evident. 
 	
 
-Now, lets try to predict the same using our Test-Data.  
+Now, let's try to predict the same using our Test-Data.  
 We supply the test-data to our model, based on its "experience" the model will predict the life expectancy as per the newer input data.    
 
 
-     # Predicting the Test set results his lifestyle. 
+     # Predicting the Testset results based on a patient's lifestyle. 
      # "ypred" function calculates the predicted probabilities at the values of the explanatory(independent) variable.
      ypred = predict(lm.r, newdata = testset) 
-     #Now, the data frame testset has the predicted values of life expectancy OR Alive(how long can one expect to stay alive based on post HCC treatment 
+     #Now, the data frame testset has the predicted values of life expectancy OR "Alive"(how long can one expect to stay alive based on post HCC treatment 
        lifestyle. 
 	
 	# Next, based on the training , let the algorithm now predict the life expectancy in years. 
@@ -210,10 +210,10 @@ Above is the graph we get for our prediction
     ![alttext](images/predicted-1.png "imagetooltip")
 
 We can assume that the predicted values are very good, as the graph we get for the predicted values clearly shows 3 different groups of points. 
-So, our algorithm is able to remove the "noise"( i.e. the effect other co-morbid factors are inducing on longivity) , and clearly predict a range of life expectancy, based on the volume of smokig done. 
+So, our algorithm is able to remove the "noise"( i.e. the effect other co-morbid factors are inducing on longevity) , and clearly predict a range of life expectancy, based on the volume of smoking done. 
 
 
 
-**To Conclude,** we have demonstrated the capabilities of GridDB, a fast in-memory database that lends itself well for not only fast querying but also analytics. 
+**To Conclude,** We have demonstrated the capabilities of GridDB, a fast in-memory database that lends itself well for not only fast querying but also analytics. 
 GridDB can work with multiple languages and has data connectors for  most popular tools. Transitioning to GridDb is easy as it follows almost similar syntax as other database products. GridDB's fast query and analytics engine adds power and speed to your queries. 
 GridDb's error messages are easy to understand, pin-pointed and give you a clear indication of where the trouble might be.  

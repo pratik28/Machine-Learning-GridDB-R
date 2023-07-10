@@ -126,14 +126,14 @@ We use fromJSON() function of R, which reads a Json file, which can easily be fe
     r <- PUT(insert_url, add_headers("Content-Type" = "application/json; charset=UTF-8" ) , config = authenticate("pratik", "pratik"), encode = "json" , body=hcc_data_JSON ) 
 
     #To check if all rows have been inserted
-     print(str(json.loads(r.text)['count']) + ' rows have been registered in the container HCC_Data.') 
+     print(str(json.loads(r.text))) + ' rows have been registered in the container HCC_Data.') 
 
 We first use our "Training Data", to teach the model how life expectancy changes with number of packets of cigarettes smoked per year. 
 Once our model is trained/taught, we expect it to take smarter decisions on its own. 
 Later we will use this "training" , and ask the model to predict the life expectancy, given a new set of data.  
 
     #Fetch(Query) Only 2 columns are of interest, Alive( i.e. years alive after HCC) and Packs_of_cigarets_per_year (Packs of cigarretes per year) . 
-     my_sql_query1 = '(f"""SELECT Packs_of_cigarets_per_year, Alive FROM HCC_Data """) '
+     my_sql_query1 = "SELECT Packs_of_cigarets_per_year, Alive FROM HCC_Data " 
 
     #To retrieve data from a GridDB container, the GridDB Web API Query URL must be suffixed with "/sql" 
      my_query_url = "https://cloud1.griddb.com/trial1602/griddb/v2/gs_clustertrial1602/dbs/r_blog/sql"

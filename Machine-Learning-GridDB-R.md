@@ -102,12 +102,17 @@ So, we send a POST request to the cluster with details of the container structur
     { "name":"Hepatitis B Surface Antigen","type":"FLOAT" },{ "name":"Hepatitis B e Antigen","type":"FLOAT" },{"name":"Hepatitis B Core Antibody","type": "FLOAT"}, 
     { "name":"Hepatitis C Virus Antibody"  ,"type": "FLOAT" }, { "name":"Smoking" ,"type": "FLOAT" }, { "name":"Diabetes" ,"type": "FLOAT" }, 
     { "name":"Obesity" ,"type": "FLOAT" }, { "name":"Hemochromatosis" ,"type": "FLOAT" }, { "name":"Arterial Hypertension" ,"type": "FLOAT" }, 
-    { "name":"Chronic Renal Insufficiency"  ,"type": "FLOAT" }, { "name":"Nonalcoholic Steatohepatitis" ,"type": "FLOAT" }, { "name":"Esophageal Varices" ,"type": "FLOAT" },{ "name":"Splenomegaly" ,"type":"FLOAT" }, { "name":"Liver Metastasis"  ,"type": "FLOAT"},  { "name":"Age at diagnosis" ,"type": "FLOAT" }, 
-    { "name":"Packs of cigarets per year" ,"type":"FLOAT" }, { "name":"Performance Status" ,"type": "FLOAT" }, { "name":"Encefalopathy degree" ,"type":"FLOAT" },{ "name": "Ascites degree" ,"type": "FLOAT" }, { "name": "International Normalised Ratio" ,"type": "FLOAT" }, { "name": "Alpha-Fetoprotein" ,"type": "FLOAT" },
-    
-    {"name":"Haemoglobin","type": "FLOAT" }, { "name":"Mean Corpuscular Volume" ,"type":"FLOAT" }, { "name":"Leukocytes","type":"FLOAT" }, { "name": "Platelets","type": "FLOAT" }, {"name":"Albumin" ,"type": "FLOAT" },{"name":"Total Bilirubin" ,"type":"FLOAT" }, {"name":"Alanine transaminase","type":"FLOAT" },
-    { "name": "Alkaline phosphatase","type": "FLOAT" }, {"name":"Total Proteins" ,"type":"FLOAT" }, { "name":"Creatinine" ,"type":"FLOAT" }, {"name": "Number of Nodules","type":"FLOAT" }, { "name":"Direct Bilirubin","type": "FLOAT" }, 
-    { "name": "Iron","type":"FLOAT" },{ "name":"Oxygen Saturation","type":"FLOAT" }, {"name": "Ferritin","type":"FLOAT" },{ "name":"Class" ,"type":"FLOAT" }, { "name": "Alive" ,"type": "FLOAT" } }  ] 
+    { "name":"Chronic Renal Insufficiency"  ,"type": "FLOAT" }, { "name":"Nonalcoholic Steatohepatitis" ,"type": "FLOAT" }, { "name":"Esophageal Varices" ,"type": "FLOAT" },
+    { "name":"Splenomegaly" ,"type":"FLOAT" }, { "name":"Liver Metastasis"  ,"type": "FLOAT"},  { "name":"Age at diagnosis" ,"type": "FLOAT" }, 
+    { "name":"Packs of cigarets per year" ,"type":"FLOAT" }, { "name":"Performance Status" ,"type": "FLOAT" }, { "name":"Encefalopathy degree" ,"type":"FLOAT" },
+    { "name": "Ascites degree" ,"type": "FLOAT" }, { "name": "International Normalised Ratio" ,"type": "FLOAT" }, { "name": "Alpha-Fetoprotein" ,"type": "FLOAT" },
+    {"name":"Haemoglobin","type": "FLOAT" }, { "name":"Mean Corpuscular Volume" ,"type":"FLOAT" }, { "name":"Leukocytes","type":"FLOAT" }, 
+    { "name": "Platelets","type": "FLOAT" }, {"name":"Albumin" ,"type": "FLOAT" },{"name":"Total Bilirubin" ,"type":"FLOAT" }, 
+    {"name":"Alanine transaminase","type":"FLOAT" }, { "name": "Alkaline phosphatase","type": "FLOAT" }, {"name":"Total Proteins" ,"type":"FLOAT" }, 
+    { "name":"Creatinine" ,"type":"FLOAT" }, {"name": "Number of Nodules","type":"FLOAT" }, { "name":"Direct Bilirubin","type": "FLOAT" }, 
+    { "name": "Iron","type":"FLOAT" },{ "name":"Oxygen Saturation","type":"FLOAT" }, {"name": "Ferritin","type":"FLOAT" },
+    { "name":"Class" ,"type":"FLOAT" }, { "name": "Alive" ,"type": "FLOAT" } }  
+    ] 
     }
   
 

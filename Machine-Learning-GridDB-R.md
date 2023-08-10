@@ -3,7 +3,6 @@
 		 Machine Learning and Regression analysis of GridDB data, using R
 
 **Introduction to GridDB.**
-
 GridDB is an in-memory database, that allows a vast quantity of data to be stored and searched quickly and safely. 
 
 GridDB is ideally suited for storing machine learning datasets because of its high performance, scalability and availability. GridDB can ingest petabytes of data quickly, handle diverse data formats easily and implements Key Container data model efficiently. 
@@ -15,14 +14,12 @@ Moreover, its in-memory processing coupled with parallel processing within a nod
 
 
 **Introduction to Machine Learning(ML)**  
-
 Machine Learning is a subset of artificial intelligence which is concerned with developing algorithms that get smarter with time; they learn from their past data and past experiences,to perform better and to make more informed decisions.  
 Data requirements in a ML project are demanding and specific. 
 Machine learning projects require huge volumes of data, first to train the ML/AI models, and then to facilitate continuous learning as more and more data keeps flowing in.
 
 
 **Why is GridDB ideally suited for AI/ML** 
-
 GridDB is ideally suited for storing machine learning datasets because of its high performance, scalability and availability.  
 GridDB can ingest petabytes of data quickly, handle diverse data formats easily and implements Key Container data model efficiently. 
 Moreover, its in-memory processing coupled with parallel processing within a node and across nodes, ensures very fast query processing and  maximum performance. 
@@ -31,12 +28,10 @@ Since our topic of discussion is GridDb and its versatile capabilities, we will 
 Linear regression is one of the most popular Machine Learning algorithms, widely used for predictive analysis, finding correlation between variables and to uncover hidden relationships.   
 
 **Introduction to R** 
-
 R is a modern programming language, suitable for complex mathematical calculations, statistical analysis, creating charts and machine learning models. We chose R for our evaluations as R is gaining a lot of prominence in this era of big data analytics and machine learning.  
 
 
 **What is Survival Analysis in ML** 
-
 Survival Analysis is used to estimate the lifespan of a particular population under study. 
 So, we try to predict the expected duration of time until an event like death of an organism or stoppage(serious failure) in a mechanical system occurs. 
  It is also called 'Time to Event' Analysis as the goal is to estimate the time for an entity or a group to experience an event of interest.  
@@ -46,7 +41,6 @@ After some trial and error, once these models start giving good results they are
 
 
 **Our Data and its semantics**  
-
 We use a publicly available dataset, which holds information about patients who underwent treatment for Hepatocellular Carcinoma, a type of cancer. 
 This data holds indicators of their post-treatment lifestyle; like alcohol consumption, smoking, obesity etc. 
 Also, many of their pathological/medical findings are there; like Arterial-Hypertension, Liver-Metastasis and Chronic-Renal-Insufficiency etc. 
@@ -55,7 +49,6 @@ Hepatocellular Carcinoma dataset (HCC dataset)
 Data Source-https://archive.ics.uci.edu/dataset/423/hcc+survival  
 
 **Summary ( what are we doing in this blog)** 
-
 We implement "Supervised Learning" in R with GridDB as the database. 
 We try to find out co-morbid factors, i.e. factors or illnesses apart from the main ailment, that could be related or causal to a patient being dead or alive after treatment. 
 Some of the data items we have, contain information about factors that are subjective and are better understood by a trained medical professional. 
@@ -65,7 +58,6 @@ Below is a snippet about the same:-
  
 
 *Connect to GridDb via HTTPS connection ( Web API)*  
-
 This method gives maximum flexibility and ease as you're not dependent on any driver or technology to connect to the database.  
 You just use the simplest access methods via the secure Web API  
 
@@ -193,9 +185,7 @@ In our training set you can clearly see that life expectancy decreases drastical
 In fact, you can clearly see 3 groups being formed:-  
 
 **(i)** Less than 50 packs per year - stay alive more than 10 years 
-
 **(ii)** Between 75-150 packs per year - stay alive close to 7 years 
-
 **(iii)** More than 200 packs a year - do not stay alive for more than 3 years  or so 
 
 **Notable findings and predictions :-** 

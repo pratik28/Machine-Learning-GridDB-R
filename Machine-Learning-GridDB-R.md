@@ -2,7 +2,7 @@
 
 		 Machine Learning and Regression analysis of GridDB data, using R
 
-**Introduction to GridDB.**
+**Introduction to GridDB.** 
 GridDB is an in-memory database, that allows a vast quantity of data to be stored and searched quickly and safely. 
 
 GridDB is ideally suited for storing machine learning datasets because of its high performance, scalability and availability. GridDB can ingest petabytes of data quickly, handle diverse data formats easily and implements Key Container data model efficiently. 

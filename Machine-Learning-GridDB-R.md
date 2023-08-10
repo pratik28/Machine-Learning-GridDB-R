@@ -193,7 +193,9 @@ In our training set you can clearly see that life expectancy decreases drastical
 In fact, you can clearly see 3 groups being formed:-  
 
 **(i)** Less than 50 packs per year - stay alive more than 10 years 
+
 **(ii)** Between 75-150 packs per year - stay alive close to 7 years 
+
 **(iii)** More than 200 packs a year - do not stay alive for more than 3 years  or so 
 
 **Notable findings and predictions :-** 
